@@ -13,7 +13,7 @@ from pathlib import Path
 from langchain_community.document_loaders import PyPDFLoader
 
 # --- Text Splitting ---
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.text_splitters import RecursiveCharacterTextSplitter
 
 # --- Embeddings (local, no API needed) ---
 from langchain_community.embeddings import HuggingFaceEmbeddings
