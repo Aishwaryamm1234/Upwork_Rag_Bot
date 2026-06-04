@@ -1,0 +1,27 @@
+# Upwork API RAG Bot — Requirements
+# Install with: pip install -r requirements.txt
+
+# Core framework
+langchain==0.2.16
+langchain-community==0.2.16
+
+# PDF loading
+pypdf==4.3.1
+
+# Local embeddings (no API key needed)
+sentence-transformers==3.0.1
+
+# Vector store
+chromadb==0.5.5
+
+# LLM API calls
+requests==2.32.3
+
+# Environment variable management
+python-dotenv==1.0.1
+
+# UI
+streamlit==1.37.1
+
+# Utility
+numpy==1.26.4
