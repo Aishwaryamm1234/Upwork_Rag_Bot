@@ -2,13 +2,15 @@ import os
 import time
 import requests
 from pathlib import Path
+import streamlit as st
 from dotenv import load_dotenv
 
-# Force load .env from the same folder as this file
-env_path = Path(__file__).parent / ".env"
-load_dotenv(dotenv_path=env_path)
+load_dotenv()
 
-DEEPINFRA_API_KEY = os.getenv("DEEPINFRA_API_KEY")
+DEEPINFRA_API_KEY = st.secrets.get(
+    "DEEPINFRA_API_KEY",
+    os.getenv("DEEPINFRA_API_KEY")
+)
 
 print("Loaded API Key:", "FOUND" if DEEPINFRA_API_KEY else "NOT FOUND")
 
